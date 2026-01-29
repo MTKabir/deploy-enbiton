@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    application: user-service
+  name: user-service-metrics
+  namespace: group-7-development
+spec:
+  endpoints:
+    - interval: 30s
+      path: /q/metrics
+      targetPort: 8080
+  selector:
+    matchLabels:
+      app: user-service

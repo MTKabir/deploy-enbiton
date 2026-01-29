@@ -6,3 +6,4 @@ resources:
   - user-service.yaml
   - user-service-hpa.yaml
   - user-route.yaml
+  - service-monitor.yaml

@@ -6,3 +6,4 @@ resources:
   - auth-service.yaml
   - auth-service-hpa.yaml
   - auth-route.yaml
+  - service-monitor.yaml
