@@ -2,9 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - deployment.yaml
-  - service.yaml
-  - route.yaml
-  - hpa.yaml
-  - service-monitor.yaml
-
+  - expense-deployment.yaml
+  - expense-service.yaml
+  - expense-service-hpa.yaml
+  - expense-route.yaml

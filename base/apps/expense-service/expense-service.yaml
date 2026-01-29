@@ -6,8 +6,5 @@ spec:
   selector:
     app: expense-service
   ports:
-ports:
-  - name: http
-    protocol: TCP
-    port: 8000
-    targetPort: 8000
+    - port: 8000
+      targetPort: 8000
