@@ -16,7 +16,7 @@ spec:
         - name: image-pull-expense
       containers:
         - name: expense-service
-          image: ghcr.io/inholland-cloud-minor-2526/group7-expense-service/expense-service:dc9199c3e051b201119fe14e22a00e5cfd75775b
+          image: ghcr.io/inholland-cloud-minor-2526/group7-expense-service/expense-service:3226d84248411d613220cfbdf5bae1d65f4e808d
           ports:
             - containerPort: 8000
           resources:
