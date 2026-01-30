@@ -4,16 +4,17 @@ metadata:
   name: user-db
 spec:
   instances: 1
-  enablePDB: false
+  enablePDB: false # no pod disruption budget is created
 
   imageName: ghcr.io/cloudnative-pg/postgresql:18.1-standard-bullseye
 
-  primaryUpdateStrategy: unsupervised
+  primaryUpdateStrategy: unsupervised # the operator will not update the primary pod automatically, it will wait for you to change the image
 
   storage:
     size: 1Gi
-    storageClass: rook-ceph-block
+    storageClass: rook-ceph-block # ask 1 giga storage  provided by Ceph via Rook.
 
+  # create persistence disk for wal file
   walStorage:
     size: 1Gi
     storageClass: rook-ceph-block
